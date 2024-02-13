@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Belajar Android Studio</string>
+    <string-array name="oprasi">
+        <item>Penjumblahan +</item>
+        <item>Pengurangan -</item>
+        <item>Perkalian *</item>
+        <item>Pembagian /</item>
+    </string-array>
+</resources>
