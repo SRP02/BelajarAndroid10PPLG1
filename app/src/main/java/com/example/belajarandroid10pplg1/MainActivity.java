@@ -27,8 +27,6 @@ public class MainActivity extends AppCompatActivity {
 
         txtPassword = findViewById(R.id.txtPassword);
         txtUsername = findViewById(R.id.txtUsername);
-//        txtConfirm = findViewById(R.id.txtConfirm);
-//        txtEmail = findViewById(R.id.txtEmail);
         btnLogin = findViewById(R.id.btnLogin);
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -36,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
                 if (txtUsername.getText().toString().equals("Satria") && txtPassword.getText().toString().equals("69420")){
                     Toast.makeText(MainActivity.this, "Sign Up Berhasil", Toast.LENGTH_LONG).show();
                     Toast.makeText(MainActivity.this, "Halo " + txtUsername.getText().toString(), Toast.LENGTH_LONG).show();
-                    Intent intent = new Intent(MainActivity.this, CalculatorAritmatika.class);
+                    Intent intent = new Intent(MainActivity.this, SesudahLogin.class);
                     startActivity(intent);
                 }
                 else {
