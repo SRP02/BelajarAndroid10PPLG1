@@ -32,8 +32,8 @@ public class AdapterSiswa10PPLG1 extends RecyclerView.Adapter<AdapterSiswa10PPLG
     // binds the data to the TextView in each row
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        String animal = mData.get(position);
-        holder.TVNamaLengkap.setText(animal);
+        String Nama = mData.get(position);
+        holder.TVNamaLengkap.setText(Nama);
     }
 
     // total number of rows
