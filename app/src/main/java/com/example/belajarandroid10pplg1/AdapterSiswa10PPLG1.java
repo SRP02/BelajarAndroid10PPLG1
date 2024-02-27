@@ -8,6 +8,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.bumptech.glide.Glide;
+
 import java.util.List;
 
 public class AdapterSiswa10PPLG1 extends  RecyclerView.Adapter<AdapterSiswa10PPLG1.ViewHolder> {
@@ -23,14 +26,16 @@ public class AdapterSiswa10PPLG1 extends  RecyclerView.Adapter<AdapterSiswa10PPL
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
         TextView textViewName;
-        TextView textViewDescription;
+        TextView textAbsen;
         ImageView imageView;
+        TextView textAlamat;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             textViewName = itemView.findViewById(R.id.tvNamaLengkap);
-            textViewDescription = itemView.findViewById(R.id.tvNoAbsen);
+            textAbsen = itemView.findViewById(R.id.tvNoAbsen);
             imageView = itemView.findViewById(R.id.IVitem);
+            textAlamat = itemView.findViewById(R.id.tvAlamat);
         }
     }
 
@@ -48,10 +53,14 @@ public class AdapterSiswa10PPLG1 extends  RecyclerView.Adapter<AdapterSiswa10PPL
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
 
         Item_Pelajar student = students.get(position);
-
         holder.textViewName.setText(student.getName());
-        holder.textViewDescription.setText(student.getAttendanceDescription());
-        holder.imageView.setImageResource(student.getImageResource());
+        holder.textAbsen.setText(student.getAbsen());
+        holder.textAlamat.setText(student.getAlamat());
+
+// Memuat gambar menggunakan Glide
+        Glide.with(context)
+                .load(student.getImageResource())
+                .into(holder.imageView);
     }
 
 
@@ -60,3 +69,4 @@ public class AdapterSiswa10PPLG1 extends  RecyclerView.Adapter<AdapterSiswa10PPL
         return students.size();
     }
 }
+
