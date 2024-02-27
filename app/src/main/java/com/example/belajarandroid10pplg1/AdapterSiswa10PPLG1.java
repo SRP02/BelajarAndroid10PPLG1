@@ -10,16 +10,12 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import java.util.List;
 
-import androidx.recyclerview.widget.RecyclerView;
-
-import java.util.List;
-
 public class AdapterSiswa10PPLG1 extends  RecyclerView.Adapter<AdapterSiswa10PPLG1.ViewHolder> {
 
-    private List<Student> students;
+    private List<Item_Pelajar> students;
     private Context context;
 
-    public AdapterSiswa10PPLG1(Context context, List<Student> students) {
+    public AdapterSiswa10PPLG1(Context context, List<Item_Pelajar> students) {
         this.context = context;
         this.students = students;
     }
@@ -51,7 +47,7 @@ public class AdapterSiswa10PPLG1 extends  RecyclerView.Adapter<AdapterSiswa10PPL
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
 
-        Student student = students.get(position);
+        Item_Pelajar student = students.get(position);
 
         holder.textViewName.setText(student.getName());
         holder.textViewDescription.setText(student.getAttendanceDescription());

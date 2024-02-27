@@ -5,8 +5,6 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,7 +13,7 @@ public class ListSiswa10PPLG1 extends AppCompatActivity {
 
     private RecyclerView recyclerView;
     private AdapterSiswa10PPLG1 adapter;
-    private List<Student> students;
+    private List<Item_Pelajar> pelajar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,46 +23,46 @@ public class ListSiswa10PPLG1 extends AppCompatActivity {
         recyclerView = findViewById(R.id.RVListSiswa10PPLG1);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        students = new ArrayList<>();
-        students.add(new Student("Abdun Nafi Hibatullah", R.drawable.hatta_profile, "Absen: 1"));
-        students.add(new Student("Aldiansyah Fayruz", R.drawable.hatta_profile, "Absen: 2"));
-        students.add(new Student("Alikha Mutiara Hati", R.drawable.hatta_profile, "Absen: 3"));
-        students.add(new Student("Allam Permata Putra", R.drawable.hatta_profile, "Absen: 4"));
-        students.add(new Student("Arbani Akhyar Radjadin", R.drawable.hatta_profile, "Absen: 5"));
-        students.add(new Student("Arsya Fauz Marzuki", R.drawable.hatta_profile, "Absen: 6"));
-        students.add(new Student("Azzam Fitrawansyah Salim", R.drawable.hatta_profile, "Absen: 7"));
-        students.add(new Student("Azzan Isham Alawiy", R.drawable.hatta_profile, "Absen: 8"));
-        students.add(new Student("Burhanuddin Zain", R.drawable.hatta_profile, "Absen: 9"));
-        students.add(new Student("Daffa Raziq Angie Irawan", R.drawable.hatta_profile, "Absen: 10"));
-        students.add(new Student("Dylan Athallah Alam", R.drawable.hatta_profile, "Absen: 11"));
-        students.add(new Student("Dzaky Ihsan Rasyid", R.drawable.hatta_profile, "Absen: 12"));
-        students.add(new Student("Hilal Syah Amali", R.drawable.hatta_profile, "Absen: 13"));
-        students.add(new Student("Jeremy Edward Domenico Sanjaya", R.drawable.hatta_profile, "Absen: 14"));
-        students.add(new Student("Jovanco Nicholas Rise", R.drawable.hatta_profile, "Absen: 15"));
-        students.add(new Student("Khalisha Kaylanasywa", R.drawable.hatta_profile, "Absen: 16"));
-        students.add(new Student("Maulana Arka Narendra", R.drawable.hatta_profile, "Absen: 17"));
-        students.add(new Student("Muhammad Asraf El Farras", R.drawable.hatta_profile, "Absen: 18"));
-        students.add(new Student("Muhammad Choirul'Anam", R.drawable.hatta_profile, "Absen: 19"));
-        students.add(new Student("Muhammad Evan Maxsalmina", R.drawable.hatta_profile, "Absen: 20"));
-        students.add(new Student("Muhammad Fakhry Alifahrizq A.", R.drawable.hatta_profile, "Absen: 21"));
-        students.add(new Student("Muhammad Rafif Azka Budiawan", R.drawable.hatta_profile, "Absen: 22"));
-        students.add(new Student("Muhammad Zuhrizal", R.drawable.hatta_profile, "Absen: 23"));
-        students.add(new Student("Nafisah Isbarsani", R.drawable.hatta_profile, "Absen: 24"));
-        students.add(new Student("Nail Zhavier Adhyaksa", R.drawable.hatta_profile, "Absen: 25"));
-        students.add(new Student("Nasharuddin Hatta", R.drawable.hatta_profile, "Absen: 26"));
-        students.add(new Student("Naufal Afdhal Haryda", R.drawable.hatta_profile, "Absen: 27"));
-        students.add(new Student("Nicholas Christian Chandra", R.drawable.hatta_profile, "Absen: 28"));
-        students.add(new Student("Ocean Karuna Muryanto", R.drawable.hatta_profile, "Absen: 29"));
-        students.add(new Student("Pajri Al Fikri Riandi", R.drawable.hatta_profile, "Absen: 30"));
-        students.add(new Student("Radithia Arlistian Saputra", R.drawable.hatta_profile, "Absen: 31"));
-        students.add(new Student("Rifqi Wibisono Himmawan", R.drawable.hatta_profile, "Absen: 32"));
-        students.add(new Student("Royyan Ahmad Zaydan", R.drawable.hatta_profile, "Absen: 33"));
-        students.add(new Student("Ruga Zinedine Airinka", R.drawable.hatta_profile, "Absen: 34"));
-        students.add(new Student("Satria Rudi Pratama", R.drawable.hatta_profile, "Absen: 35"));
-        students.add(new Student("Shofiyyul Hilmi", R.drawable.hatta_profile, "Absen: 36"));
-        students.add(new Student("Zaskia Amelia Putri", R.drawable.hatta_profile, "Absen: 37"));
+        pelajar = new ArrayList<>();
+        pelajar.add(new Item_Pelajar("Abdun Nafi Hibatullah", R.drawable.hatta_profile, "Absen: 1"));
+        pelajar.add(new Item_Pelajar("Aldiansyah Fayruz", R.drawable.hatta_profile, "Absen: 2"));
+        pelajar.add(new Item_Pelajar("Alikha Mutiara Hati", R.drawable.hatta_profile, "Absen: 3"));
+        pelajar.add(new Item_Pelajar("Allam Permata Putra", R.drawable.hatta_profile, "Absen: 4"));
+        pelajar.add(new Item_Pelajar("Arbani Akhyar Radjadin", R.drawable.hatta_profile, "Absen: 5"));
+        pelajar.add(new Item_Pelajar("Arsya Fauz Marzuki", R.drawable.hatta_profile, "Absen: 6"));
+        pelajar.add(new Item_Pelajar("Azzam Fitrawansyah Salim", R.drawable.hatta_profile, "Absen: 7"));
+        pelajar.add(new Item_Pelajar("Azzan Isham Alawiy", R.drawable.hatta_profile, "Absen: 8"));
+        pelajar.add(new Item_Pelajar("Burhanuddin Zain", R.drawable.hatta_profile, "Absen: 9"));
+        pelajar.add(new Item_Pelajar("Daffa Raziq Angie Irawan", R.drawable.hatta_profile, "Absen: 10"));
+        pelajar.add(new Item_Pelajar("Dylan Athallah Alam", R.drawable.hatta_profile, "Absen: 11"));
+        pelajar.add(new Item_Pelajar("Dzaky Ihsan Rasyid", R.drawable.hatta_profile, "Absen: 12"));
+        pelajar.add(new Item_Pelajar("Hilal Syah Amali", R.drawable.hatta_profile, "Absen: 13"));
+        pelajar.add(new Item_Pelajar("Jeremy Edward Domenico Sanjaya", R.drawable.hatta_profile, "Absen: 14"));
+        pelajar.add(new Item_Pelajar("Jovanco Nicholas Rise", R.drawable.hatta_profile, "Absen: 15"));
+        pelajar.add(new Item_Pelajar("Khalisha Kaylanasywa", R.drawable.hatta_profile, "Absen: 16"));
+        pelajar.add(new Item_Pelajar("Maulana Arka Narendra", R.drawable.hatta_profile, "Absen: 17"));
+        pelajar.add(new Item_Pelajar("Muhammad Asraf El Farras", R.drawable.hatta_profile, "Absen: 18"));
+        pelajar.add(new Item_Pelajar("Muhammad Choirul'Anam", R.drawable.hatta_profile, "Absen: 19"));
+        pelajar.add(new Item_Pelajar("Muhammad Evan Maxsalmina", R.drawable.hatta_profile, "Absen: 20"));
+        pelajar.add(new Item_Pelajar("Muhammad Fakhry Alifahrizq A.", R.drawable.hatta_profile, "Absen: 21"));
+        pelajar.add(new Item_Pelajar("Muhammad Rafif Azka Budiawan", R.drawable.hatta_profile, "Absen: 22"));
+        pelajar.add(new Item_Pelajar("Muhammad Zuhrizal", R.drawable.hatta_profile, "Absen: 23"));
+        pelajar.add(new Item_Pelajar("Nafisah Isbarsani", R.drawable.hatta_profile, "Absen: 24"));
+        pelajar.add(new Item_Pelajar("Nail Zhavier Adhyaksa", R.drawable.hatta_profile, "Absen: 25"));
+        pelajar.add(new Item_Pelajar("Nasharuddin Hatta", R.drawable.hatta_profile, "Absen: 26"));
+        pelajar.add(new Item_Pelajar("Naufal Afdhal Haryda", R.drawable.hatta_profile, "Absen: 27"));
+        pelajar.add(new Item_Pelajar("Nicholas Christian Chandra", R.drawable.hatta_profile, "Absen: 28"));
+        pelajar.add(new Item_Pelajar("Ocean Karuna Muryanto", R.drawable.hatta_profile, "Absen: 29"));
+        pelajar.add(new Item_Pelajar("Pajri Al Fikri Riandi", R.drawable.hatta_profile, "Absen: 30"));
+        pelajar.add(new Item_Pelajar("Radithia Arlistian Saputra", R.drawable.hatta_profile, "Absen: 31"));
+        pelajar.add(new Item_Pelajar("Rifqi Wibisono Himmawan", R.drawable.hatta_profile, "Absen: 32"));
+        pelajar.add(new Item_Pelajar("Royyan Ahmad Zaydan", R.drawable.hatta_profile, "Absen: 33"));
+        pelajar.add(new Item_Pelajar("Ruga Zinedine Airinka", R.drawable.hatta_profile, "Absen: 34"));
+        pelajar.add(new Item_Pelajar("Satria Rudi Pratama", R.drawable.hatta_profile, "Absen: 35"));
+        pelajar.add(new Item_Pelajar("Shofiyyul Hilmi", R.drawable.hatta_profile, "Absen: 36"));
+        pelajar.add(new Item_Pelajar("Zaskia Amelia Putri", R.drawable.hatta_profile, "Absen: 37"));
 
-        adapter = new AdapterSiswa10PPLG1(this, students);
+        adapter = new AdapterSiswa10PPLG1(this, pelajar);
         recyclerView.setAdapter(adapter);
     }
 }

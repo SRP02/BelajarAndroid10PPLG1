@@ -1,11 +1,11 @@
 package com.example.belajarandroid10pplg1;
 
-public class Student {
+public class Item_Pelajar {
     private String name;
     private int imageResource;
     private String attendanceDescription;
 
-    public Student(String name, int imageResource, String attendanceDescription) {
+    public Item_Pelajar(String name, int imageResource, String attendanceDescription) {
         this.name = name;
         this.imageResource = imageResource;
         this.attendanceDescription = attendanceDescription;
